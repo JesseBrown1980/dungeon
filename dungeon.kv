@@ -1,0 +1,23 @@
+#:kivy 1.10.0
+
+<GridWidget>:
+    canvas.before:
+        Color:
+            rgba: self.background
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<Hallway>:
+    canvas.before:
+        Color:
+            hsv: [self.hue, 1, 1]
+        Line:
+            points: [self.A, self.C]
+            width: 3
+        Line:
+            points: [self.A, self.B, self.C]
+        Line:
+            points: [self.A, self.D, self.C]
+
+
